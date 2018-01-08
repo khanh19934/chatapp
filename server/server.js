@@ -35,6 +35,6 @@ io.on('connection', (socket) => {
 app.use(express.static(publicPath));
 const PORT = process.env.PORT || 8080;
 
-server.listen(PORT,() => {
+server.listen(process.env.PORT || 8080,() => {
     console.log('Server is running in port: ' + PORT);
 });
